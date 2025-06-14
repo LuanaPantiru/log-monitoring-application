@@ -10,6 +10,8 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
+@Builder
+@ToString
 public class Log {
     private LocalTime time;
     private String description;
