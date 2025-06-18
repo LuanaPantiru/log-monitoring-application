@@ -1,0 +1,16 @@
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 39547 takes longer than 10 min
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 45135 takes longer than 10 min
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 81258 takes longer than 10 min
+2025-06-18 21:12:39 WARN  c.e.l.services.LogService - The job with pid 87228 takes longer than 5 min, but less than 10 min
+2025-06-18 21:12:39 WARN  c.e.l.services.LogService - The job with pid 50295 takes longer than 5 min, but less than 10 min
+2025-06-18 21:12:39 WARN  c.e.l.services.LogService - The job with pid 27222 takes longer than 5 min, but less than 10 min
+2025-06-18 21:12:39 WARN  c.e.l.services.LogService - The job with pid 87570 takes longer than 5 min, but less than 10 min
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 22003 takes longer than 10 min
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 85742 takes longer than 10 min
+2025-06-18 21:12:39 WARN  c.e.l.services.LogService - The job with pid 98746 takes longer than 5 min, but less than 10 min
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 39860 takes longer than 10 min
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 52532 takes longer than 10 min
+2025-06-18 21:12:39 WARN  c.e.l.services.LogService - The job with pid 62401 takes longer than 5 min, but less than 10 min
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 23703 takes longer than 10 min
+2025-06-18 21:12:39 ERROR c.e.l.services.LogService - The job with pid 70808 takes longer than 10 min
+2025-06-18 21:12:39 WARN  c.e.l.services.LogService - The job with pid 24482 takes longer than 5 min, but less than 10 min
