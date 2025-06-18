@@ -28,7 +28,6 @@ import static java.util.Objects.isNull;
 @Slf4j
 public class LogService {
 
-    private final Map<Integer, Log> startedLogs = new LinkedHashMap<>(); // using linked list to maintain the order of START jobs
     private static final Integer ERROR_MINUTES = 10;
     private static final Integer WARNING_MINUTES = 5;
 
@@ -38,11 +37,13 @@ public class LogService {
             throw new IllegalArgumentException("The file is empty.");
         }
 
+        final Map<Integer, Log> startedLogs = new LinkedHashMap<>(); // using linked list to maintain the order of START jobs
+
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(file.getInputStream()))) {
             String line;
             while ((line = reader.readLine()) != null) { //read line by line the file
                 Log log = convertToLog(line); //every line is converted into a Log object
-                Log corespondentLog = findCorespondentLog(log);  // for an END job, search the START one
+                Log corespondentLog = findCorespondentLog(log, startedLogs);  // for an END job, search the START one
                 if (isNull(corespondentLog)) {
                     startedLogs.put(log.getPid(), log);
                 } else {
@@ -65,7 +66,7 @@ public class LogService {
         }
     }
 
-    private Log findCorespondentLog(Log log) {
+    private Log findCorespondentLog(Log log, Map<Integer, Log> startedLogs) {
         if (END.equals(log.getProcessStatus())) {
             return startedLogs.computeIfAbsent(log.getPid(), k -> {
                 throw new NotFoundException("File incorrect. Didn't find the start status for job with pid " + log.getPid());

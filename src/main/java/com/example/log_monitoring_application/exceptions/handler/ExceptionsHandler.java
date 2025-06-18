@@ -29,7 +29,7 @@ public class ExceptionsHandler {
 
     @ExceptionHandler(Throwable.class)
     public ResponseEntity<String> handleAnyException(Throwable ex) {
-        return ResponseEntity.badRequest()
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body("Unknow error: " + ex.getMessage());
     }
 }
